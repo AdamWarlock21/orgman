@@ -10,6 +10,7 @@ public class GenderFactoryTest {
     @Test
     public void buildGender() {
         Gender gender = GenderFactory.buildGender("M");
-        Assert.assertNotNull(gender);
+        Assert.assertNotNull(gender.getGenderId());
+        System.out.println("Gender Id is: " + gender.getGenderId());
     }
 }
