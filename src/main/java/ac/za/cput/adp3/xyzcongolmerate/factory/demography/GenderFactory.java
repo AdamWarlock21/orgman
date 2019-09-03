@@ -9,7 +9,7 @@ public class GenderFactory {
     private static final String SUFFIX = Helper.getSuffixFromClassName(GenderFactory.class);
 
     public static Gender buildGender(String genderDescription) {
-       return new Gender.Builder().genderId(SUFFIX).
+       return new Gender.Builder().genderId(Helper.generateRandomGivenSuffix(SUFFIX)).
                genderDescription(genderDescription).
                build();
     }
