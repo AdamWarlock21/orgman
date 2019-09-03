@@ -5,6 +5,7 @@ import ac.za.cput.adp3.xyzcongolmerate.repository.demography.RaceRepository;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.function.Predicate;
 
 public class RaceRepositoryImpl implements RaceRepository {
 
@@ -20,33 +21,46 @@ public class RaceRepositoryImpl implements RaceRepository {
         return raceRepository;
     }
 
-    //TODO: Implement body
+
     @Override
     public Race create(Race race) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        this.raceDB.add(race);
+        return race;
     }
 
-    //TODO: Implement body
+
     @Override
     public Race read(String raceId) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return raceDB.stream().filter(race -> race.getRaceId() == raceId).findAny().orElse(null);
+
     }
 
-    //TODO: Implement body
     @Override
     public Race update(Race race) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        Race toDelete = read(race.getRaceId());
+
+        if(toDelete != null) {
+            raceDB.remove(toDelete);
+            return create(race);
+        }
+        return null;
     }
 
-    //TODO: Implement body
+
     @Override
-    public void delete(String raceId) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public boolean delete(String raceId) {
+        Race toDelete = this.read(raceId);
+
+        if (toDelete != null){
+            this.raceDB.remove(toDelete);
+            return true;
+        }
+        return false;
     }
 
-    //TODO: Implement body
+
     @Override
     public Set<Race> getAll() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return raceDB;
     }
 }

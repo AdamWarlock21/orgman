@@ -13,6 +13,7 @@ public interface OrganisationUserService {
 
     //Question1-Service
     Set<String> getUserFullNamesInOrganisation(String orgCode);
+    
     //Question2-Service
     Set<String> getUserOrganisations(String userEmail);
 }

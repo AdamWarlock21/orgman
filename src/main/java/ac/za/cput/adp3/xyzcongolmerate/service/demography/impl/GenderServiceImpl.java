@@ -9,6 +9,10 @@ import java.util.Set;
 
 public class GenderServiceImpl implements GenderService {
 
+    static GenderServiceImpl GenderService() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     private GenderRepository genderRepository;
     private static GenderService genderService = null;
 

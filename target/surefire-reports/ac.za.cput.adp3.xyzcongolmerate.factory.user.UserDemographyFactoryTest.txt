@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: ac.za.cput.adp3.xyzcongolmerate.factory.user.UserDemographyFactoryTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.172 s <<< FAILURE! - in ac.za.cput.adp3.xyzcongolmerate.factory.user.UserDemographyFactoryTest
+buildUserDemography(ac.za.cput.adp3.xyzcongolmerate.factory.user.UserDemographyFactoryTest)  Time elapsed: 0.016 s  <<< ERROR!
+java.lang.RuntimeException: Uncompilable source code - Erroneous sym type: ac.za.cput.adp3.xyzcongolmerate.factory.user.UserDemographyFactory.buildUserDemography
+	at ac.za.cput.adp3.xyzcongolmerate.factory.user.UserDemographyFactoryTest.buildUserDemography(UserDemographyFactoryTest.java:12)
+

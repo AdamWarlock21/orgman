@@ -9,6 +9,10 @@ import java.util.Set;
 
 public class RaceServiceImpl implements RaceService {
 
+    static RaceServiceImpl getService() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     private RaceRepository raceRepository;
     private static RaceService raceService = null;
 

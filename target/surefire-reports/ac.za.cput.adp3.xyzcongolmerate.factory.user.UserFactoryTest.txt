@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: ac.za.cput.adp3.xyzcongolmerate.factory.user.UserFactoryTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in ac.za.cput.adp3.xyzcongolmerate.factory.user.UserFactoryTest

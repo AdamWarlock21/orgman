@@ -5,7 +5,9 @@ import ac.za.cput.adp3.xyzcongolmerate.repository.demography.GenderRepository;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.function.Predicate;
 
+@SuppressWarnings("ALL")
 public class GenderRepositoryImpl implements GenderRepository {
 
     private static GenderRepository genderRepository = null;
@@ -20,33 +22,46 @@ public class GenderRepositoryImpl implements GenderRepository {
         return genderRepository;
     }
 
-    //TODO: Implement body
+
     @Override
     public Gender create(Gender gender) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        this.genderDB.add(gender);
+        return gender;
     }
 
-    //TODO: Implement body
+
     @Override
-    public Gender read(String genderId) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public Gender read(final String genderId) {
+      return genderDB.stream().filter(race -> race.getGenderId()== genderId).findAny().orElse(null);
     }
 
-    //TODO: Implement body
+
     @Override
     public Gender update(Gender gender) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        Gender genderToDelete = read(gender.getGenderId());
+
+        if(genderToDelete != null) {
+            genderDB.remove(genderToDelete);
+            return create(gender);
+        }
+        return null;
     }
 
-    //TODO: Implement body
+
     @Override
-    public void delete(String genderId) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public boolean delete(String genderId) {
+        Gender toDelete = this.read(genderId);
+
+        if (toDelete != null){
+            this.genderDB.remove(toDelete);
+            return true;
+        }
+        return false;
     }
 
-    //TODO: Implement body
+
     @Override
     public Set<Gender> getAll() {
-        throw new UnsupportedOperationException("Not supported yet.");
+      return genderDB;
     }
 }
