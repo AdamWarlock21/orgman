@@ -10,6 +10,7 @@ public class OrganisationFactoryTest {
     @Test
     public void buildOrganisation() {
         Organisation org = OrganisationFactory.buildOrganisation("CPUT");
-        Assert.assertNotNull(org);
+        Assert.assertNotNull(org.getOrgCode());
+        System.out.println("Organisation code is: " + org.getOrgCode());
     }
 }
