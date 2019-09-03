@@ -9,7 +9,8 @@ public class UserDemographyFactoryTest {
 
     @Test
     public void buildUserDemography() {
-        UserDemography userDem = UserDemographyFactory.buildUserDemography("bleep@cput.ac.za", "Admin", "F", "1",(1994-05-13));
-        Assert.assertNotNull(userDem);
+        UserDemography userDemography = UserDemographyFactory.buildUserDemography("bleeep@mycput.ac.za", "Admin", "gender", "race", date);
+        System.out.println("The User Demography Email is: " + userDemography.getUserEmail());
+        Assert.assertNotNull(userDemography);
     }
 }
