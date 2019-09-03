@@ -10,6 +10,7 @@ public class RaceFactoryTest {
     @Test
     public void buildRace() {
          Race race = RaceFactory.buildRace("African");
-         Assert.assertNotNull(race);
+         Assert.assertNotNull(race.getRaceId());
+         System.out.println("Race Id is: " + race.getRaceId());
     }
 }
