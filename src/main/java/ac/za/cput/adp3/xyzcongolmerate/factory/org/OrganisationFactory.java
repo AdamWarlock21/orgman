@@ -9,7 +9,7 @@ private static final String SUFFIX = Helper.getSuffixFromClassName(OrganisationF
 
     public static Organisation buildOrganisation(String organisationName) {
         return new Organisation.Builder().
-                orgCode(SUFFIX).
+                orgCode(Helper.generateRandomGivenSuffix(SUFFIX)).
                 orgName(organisationName).
                 build();
     }
