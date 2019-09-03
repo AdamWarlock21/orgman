@@ -9,7 +9,7 @@ private static final String SUFFIX = Helper.getSuffixFromClassName(RaceFactory.c
 
     public static Race buildRace(String raceDescription) {
         return new Race.Builder().
-                raceId(SUFFIX).
+                raceId(Helper.generateRandomGivenSuffix(SUFFIX)).
                 raceDescription(raceDescription).
                 build();
     }
