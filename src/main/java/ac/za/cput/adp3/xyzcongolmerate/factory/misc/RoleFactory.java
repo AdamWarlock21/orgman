@@ -10,7 +10,7 @@ private static final String SUFFIX = Helper.getSuffixFromClassName(RoleFactory.c
     
     public static Role buildRole(String roleName) {
         return new Role.Builder().
-                roleId(SUFFIX).
+                roleId(Helper.generateRandomGivenSuffix(SUFFIX)).
                 roleName(roleName).
                 build();
     }
