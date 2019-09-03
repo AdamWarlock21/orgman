@@ -10,6 +10,8 @@ public class OrganisationUserFactoryTest {
     @Test
     public void buildOrganisationUser() {
         OrganisationUser orgUser = OrganisationUserFactory.buildOrganisationUser("1", "bleep@cput.ac.za");
+        System.out.println("The User Email is: " + orgUser.getUserEmail());
+
         Assert.assertNotNull(orgUser);
     }
 }
