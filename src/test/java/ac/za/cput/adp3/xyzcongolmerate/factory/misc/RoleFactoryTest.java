@@ -10,6 +10,7 @@ public class RoleFactoryTest {
     @Test
     public void buildRole() {
     Role role = RoleFactory.buildRole("Admin");
-        Assert.assertNotNull(role);
+        Assert.assertNotNull(role.getRoleId());
+        System.out.println("Role is: " + role.getRoleId());
     }
 }
