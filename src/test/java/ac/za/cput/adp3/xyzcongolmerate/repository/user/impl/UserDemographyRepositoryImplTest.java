@@ -10,6 +10,7 @@ import org.junit.Test;
 import java.util.Set;
 import org.junit.Assert;
 import org.junit.runners.MethodSorters;
+import java.util.Date;
 
 import static org.junit.Assert.*;
 import org.junit.Before;
@@ -25,8 +26,9 @@ private UserDemography user;
     }
     @Before
     public void setUp() throws Exception{
+        Date date = new Date();
         this.repo = UserDemographyRepositoryImpl.getUserDemographyRepository();
-        this.user = UserDemographyFactory.buildUserDemography("bleep@mycput.ac.za", "Admin", "1", "1",(13-05-1994));
+        this.user = UserDemographyFactory.buildUserDemography("bleep@mycput.ac.za", "Admin", "1", "1",date);
     }
     @Test
     public void a_create() {
