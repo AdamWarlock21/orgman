@@ -11,6 +11,8 @@ public class UserRoleFactoryTest {
     @Test
     public void buildUserRole() {
         UserRole user = UserRoleFactory.buildUserRole("bleep@mypcut.ac.za", "Ismail", "Vardien");
+        System.out.println("The Users email is: " + user.getUserEmail());
         Assert.assertNotNull(user);
+
     }
 }
